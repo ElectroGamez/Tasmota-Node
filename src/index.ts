@@ -25,16 +25,11 @@ export class TasmotaInstance {
         let axiosResponse;
         if (number) axiosResponse = (await this.sendCmd(`Power${number} ${status}`));
         else axiosResponse = (await this.sendCmd(`Power0 ${status}`));
-
         return <PowerResponse> axiosResponse?.data;
     }
 }
 
 export type PowerState = "ON" | "OFF" | "TOGGLE";
 export interface PowerResponse {
-    POWER1?: "ON" | "OFF",
-    POWER2?: "ON" | "OFF"
-    POWER3?: "ON" | "OFF"
-    POWER4?: "ON" | "OFF"
-    POWER5?: "ON" | "OFF"
+    [key: string]: "ON" | "OFF"
 }
