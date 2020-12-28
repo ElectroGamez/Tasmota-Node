@@ -2,8 +2,8 @@
   "name": "tasmota-node",
   "version": "1.0.0",
   "description": "A helpfull package for making Tasmota API calls.",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "serve": "nodemon",
     "build": "tsc"

@@ -21,10 +21,11 @@ export class TasmotaInstance {
         return axiosResponse;
     }
 
-    async power(status: PowerState, number?: number): Promise<PowerResponse> {
+    async power(status?: PowerState, number?: number): Promise<PowerResponse> {
         let axiosResponse;
-        if (number) axiosResponse = (await this.sendCmd(`Power${number} ${status}`));
-        else axiosResponse = (await this.sendCmd(`Power0 ${status}`));
+        if (number && status) axiosResponse = (await this.sendCmd(`Power${number} ${status}`));
+        else if (status) axiosResponse = (await this.sendCmd(`Power0 ${status}`));
+        else axiosResponse = (await this.sendCmd("Power0"));
         return <PowerResponse> axiosResponse?.data;
     }
 }
