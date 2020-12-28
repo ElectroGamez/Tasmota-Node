@@ -1,13 +1,13 @@
 {
   "name": "tasmota-node",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A helpfull typescript package for making Tasmota API calls.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "serve": "nodemon",
     "build": "tsc",
-    "prepublish": "tsc"
+    "prepare": "npm run build"
   },
   "author": "ElectroGamez",
   "license": "ISC",
