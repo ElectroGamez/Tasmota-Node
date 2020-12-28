@@ -1,6 +1,6 @@
 {
   "name": "tasmota-node",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A helpfull typescript package for making Tasmota API calls.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
